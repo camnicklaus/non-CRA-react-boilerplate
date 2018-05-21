@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         filename: '[name].[hash].js',
-        path: path.resolve('./build'),
+        path: path.resolve('./build/static'),
     },
     module: {
         rules: [
@@ -33,6 +33,6 @@ module.exports = {
         new HtmlwebPackPlugin({
             template: 'public/index.html'
         }),
-        new CleanwebpackPlugin(['build'])
+        new CleanwebpackPlugin(['build/static'])
     ],
 }
